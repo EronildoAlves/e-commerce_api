@@ -1,5 +1,6 @@
 package com.nascimento.ecommerce.model;
 
+import com.nascimento.ecommerce.dto.ProductCreateDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,6 +24,12 @@ public class Product {
     private String description;
 
     private BigDecimal price;
+
+    public Product(ProductCreateDTO dto) {
+        this.name = dto.name();
+        this.description = dto.description();
+        this.price = dto.price();
+    }
 }
 
 

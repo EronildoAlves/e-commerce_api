@@ -32,11 +32,8 @@ build/
 ### VS Code ###
 .vscode/
 
-### Docker ###
-postgres-data/
-
 ### Resources ###
 *.properties
 
-### docker-compose ###
-*.yml
+### Docker ###
+postgres-data/
