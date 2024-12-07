@@ -1,7 +1,9 @@
 package com.nascimento.ecommerce.model;
 
 import com.nascimento.ecommerce.dto.ProductCreateDTO;
+import com.nascimento.ecommerce.dto.UpdateProductDTO;
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,6 +31,18 @@ public class Product {
         this.name = dto.name();
         this.description = dto.description();
         this.price = dto.price();
+    }
+
+    public void updateInformation(@Valid UpdateProductDTO dto) {
+        if (dto.name() != null) {
+            this.name = dto.name();
+        }
+        if (dto.description() != null) {
+            this.description = dto.description();
+        }
+        if (dto.price() != null) {
+            this.price = dto.price();
+        }
     }
 }
 
