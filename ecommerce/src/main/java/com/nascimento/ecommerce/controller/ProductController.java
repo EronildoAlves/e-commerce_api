@@ -40,16 +40,19 @@ public class ProductController {
 
     @PutMapping
     @Transactional
-    public ResponseEntity<ProductResponseDTO> update (@RequestBody @Valid UpdateProductDTO dto) {
+    public ResponseEntity<ProductResponseDTO> update(@RequestBody @Valid UpdateProductDTO dto) {
         var product = repository.getReferenceById(dto.id());
         product.updateInformation(dto);
         return ResponseEntity.ok(new ProductResponseDTO(product));
-
-
-
-
     }
 
-
-
+    @DeleteMapping("/{id}")
+    @Transactional
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        if (!repository.existsById(id)) {
+            return ResponseEntity.noContent().build();
+        }
+        repository.deleteById(id);
+        return ResponseEntity.noContent().build();
+    }
 }
