@@ -37,6 +37,6 @@ POST /produtos - Cadastra um novo produto
 PUT /produtos/{id} - Atualiza um produto existente
 
 DELETE /produtos/{id} - Remove um produto
-<br> <br>
-<p>Imagem do banco H2</p>
+<br>
+### Banco de dados H2
 <img src="img/banco-h2.png" alt="Descrição da minha imagem" width="600" height="300">
