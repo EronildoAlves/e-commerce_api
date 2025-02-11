@@ -39,4 +39,4 @@ PUT /produtos/{id} - Atualiza um produto existente
 DELETE /produtos/{id} - Remove um produto
 <br>
 ### Banco de dados H2
-<img src="img/banco-h2.png" alt="Descrição da minha imagem" width="600" height="300">
+<img src="img/banco-h2.png" alt="Imagem do banco de dados" width="600" height="300">
